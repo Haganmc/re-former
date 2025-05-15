@@ -1,0 +1,33 @@
+<h2>Edit a User</h2>
+<%= form_with model: @user, local: true do |form| %>
+    <% if @user.errors.any? %>
+        <div>
+            <h3>
+                <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
+            </h3>
+            <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <div>
+        <%= form.label :username %>
+        <%= form.text_field :username, required: true %>
+    </div>
+
+    <div>
+        <%= form.label :email %>
+        <%= form.email_field :email, required: true %>
+    </div>
+
+    <div>
+        <%= form.label :password %>
+        <%= form.password_field :password, required: true %>
+    </div>
+
+    <div>
+        <%= form.submit "Edit User" %>
+    </div>
+<% end %>
