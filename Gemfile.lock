@@ -315,7 +315,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    solargraph (0.54.4)
+    solargraph (0.54.5)
       backport (~> 1.2)
       benchmark (~> 0.4)
       bundler (~> 2.0)
